@@ -1,0 +1,38 @@
+<div class="container">
+  <h3>Zoznam zaočkovaných osôb</h3>
+  <div *ngIf="!osoby || osoby?.length === 0">
+  <div>
+    Zoznam zaočkovaných osôb je prázdny.
+  </div>
+  </div>
+  <div>
+    <table class="table" *ngIf="osoby.length > 0">
+      <thead>
+        <tr>
+          <th scope="col">Meno</th>
+          <th scope="col">Dátum narodenia</th>
+          <th scope="col">Kontakt</th>
+          <th scope="col">Bydlisko</th>
+          <th scope="col">Počet dávok</th>
+          <th scope="col">Zaočkovanosť od</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let osoba of osoby">
+          <td>{{osoba.id}}</td>
+          <td>{{osoba.meno + ' ' + osoba.priezvisko}}</td>
+          <td>{{osoba.datum_narodenia}}</td>
+          <td>{{osoba.kontakt}}</td>
+          <td>{{osoba.bydlisko}}</td>
+          <td>0</td>
+          <td>0</td>
+            <!--
+            <button (click)="uprav(osoba.id)">UPRAVIŤ</button>
+            <button (click)="zmaz(osoba.id)">ZMAZAŤ</button>
+            -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

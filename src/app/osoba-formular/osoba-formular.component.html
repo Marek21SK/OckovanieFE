@@ -1,0 +1,62 @@
+<div class="jumbotron text-center" style="background-color: aliceblue">
+  <h1 id="formular">Formulár na pridanie Osôb </h1>
+</div>
+<br>
+
+<form [formGroup]="form">
+  <div class="container">
+    <div class="form-group">
+      <div class="row">
+
+        <label id="o0">ID:</label>
+        <input class="form-control" formControlName="id">
+        <br>
+
+      <label id="o1">Meno:</label>
+      <input class="form-control" formControlName="meno">
+    <br>
+
+      <label id="o2">Priezvisko:</label>
+      <input class="form-control" formControlName="priezvisko">
+    <br>
+
+      <label id="o3">Email:</label>
+      <input class="form-control" formControlName="email">
+        <!--
+        <div *ngIf="form.controls['email'].valid && form.controls['email'].touched">
+          <div *ngIf="form.controls['email'].errors?['required']:" style="background-color: red">
+            Vyžaduje sa zadanie emailu
+          </div>
+          <div *ngIf="form.controls['email'].errors?['required']" style="background-color: red">
+            Správne zadaný email
+          </div>
+        </div>
+        -->
+    <br>
+
+      <label id="o4">Dátum narodenia:</label>
+      <input class="form-control" formControlName="datum_narodenia">
+    <br>
+
+      <label id="o5">Kontakt:</label>
+      <input class="form-control" formControlName="kontakt">
+    <br>
+
+      <label id="o6">Pohlavie:</label>
+      <input type="radio" name="pohlavie" value="male">Chlap
+      <input type="radio" name="pohlavie" value="female">Žena
+        <br>
+
+        <label id="o7">Bydlisko:</label>
+      <input class="form-control" formControlName="bydlisko">
+        <br>
+
+      <button (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
+        <!--
+    <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
+    <button (click)="zrus();">ZRUŠ</button>
+       -->
+      </div>
+    </div>
+  </div>
+</form>

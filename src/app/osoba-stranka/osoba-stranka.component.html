@@ -1,0 +1,17 @@
+<h1 class="col">Hlavná stránka zaočkovaných osôb</h1>
+
+<app-osoba-formular [osoba]="osobaNaUpravu"
+                    (pridajOsobu) ="pridaj($event)"
+                    (upravOsobu)="uprav($event)">
+</app-osoba-formular>
+
+<app-osoba-zoznam [osoby]="osoby"
+                  (upravOsobu)="upravOsobuZoZoznamu($event)"
+                  (zmazOsobu)="zmazOsobuZoZozanmu($event)">
+</app-osoba-zoznam>
+
+<br>
+
+<div class="container">
+  <button id="naspäť" (click)="chodSpat()">Naspäť do hlavného menu</button>
+</div>
