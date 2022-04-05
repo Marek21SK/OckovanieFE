@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU {OSOBY}
+enum MENU {OSOBY, VAKCINY}
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -16,6 +16,10 @@ export class MenuComponent {
   nastaMenu(m: MENU){
     if (m == MENU.OSOBY){
       this.router.navigate(["/osoba"]);
+    }
+
+    if (m == MENU.VAKCINY){
+      this.router.navigate(["/vakcina"]);
     }
   }
 }

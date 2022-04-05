@@ -10,6 +10,9 @@ import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { VakcinaFormularComponent } from './vakcina-formular/vakcina-formular.component';
+import { VakcinaStrankaComponent } from './vakcina-stranka/vakcina-stranka.component';
+import { VakcinaZoznamComponent } from './vakcina-zoznam/vakcina-zoznam.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MenuComponent,
     OsobaFormularComponent,
     OsobaStrankaComponent,
-    OsobaZoznamComponent
+    OsobaZoznamComponent,
+    VakcinaFormularComponent,
+    VakcinaStrankaComponent,
+    VakcinaZoznamComponent
   ],
   imports: [
     BrowserModule,
