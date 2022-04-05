@@ -10,11 +10,11 @@
 
       <label id="o1">Meno:</label>
       <input class="form-control" formControlName="meno">
-    <br>
+      <br>
 
       <label id="o2">Priezvisko:</label>
       <input class="form-control" formControlName="priezvisko">
-    <br>
+      <br>
 
       <label id="o3">Email:</label>
       <input class="form-control" formControlName="email">
@@ -28,23 +28,24 @@
           </div>
         </div>
         -->
-    <br>
+      <br>
 
-      <label id="o4">Dátum narodenia:</label>
-      <input class="form-control" formControlName="datum_narodenia">
-    <br>
+      <label id="o4">Rodné číslo:</label>
+      <input class="form-control" formControlName="rodne_cislo">
+      <br>
 
       <label id="o5">Kontakt:</label>
       <input class="form-control" formControlName="kontakt">
-    <br>
+      <br>
+
+        <label id="o7">Bydlisko:</label>
+        <input class="form-control" formControlName="bydlisko">
+        <br>
 
       <label id="o6">Pohlavie:</label>
       <input type="radio" name="pohlavie" value="male">Chlap
       <input type="radio" name="pohlavie" value="female">Žena
         <br>
-
-        <label id="o7">Bydlisko:</label>
-      <input class="form-control" formControlName="bydlisko">
         <br>
 
       <button (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>

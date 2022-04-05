@@ -3,7 +3,7 @@ export class Osoba{
   meno: string;
   priezvisko: string;
   email: string;
-  datum_narodenia: Date;
+  rodne_cislo: string;
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
@@ -14,7 +14,7 @@ export class Osoba{
     this.meno = osoba.meno;
     this.priezvisko = osoba.priezvisko;
     this.email = osoba.email;
-    this.datum_narodenia = osoba.datum_narodenia;
+    this.rodne_cislo = osoba.rodne_cislo;
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;
@@ -25,7 +25,7 @@ export class OsobaZoznam{
   meno: string;
   priezvisko: string;
   email: string;
-  datum_narodenia: Date;
+  rodne_cislo: string;
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
@@ -35,7 +35,7 @@ export class OsobaZoznam{
     this.meno = osoba.meno;
     this.priezvisko = osoba.priezvisko;
     this.email = osoba.email;
-    this.datum_narodenia = osoba.datum_narodenia;
+    this.rodne_cislo = osoba.rodne_cislo;
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;

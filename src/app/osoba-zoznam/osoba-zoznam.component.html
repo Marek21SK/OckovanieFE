@@ -9,8 +9,8 @@
     <table class="table" *ngIf="osoby.length > 0">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Meno</th>
-          <th scope="col">Dátum narodenia</th>
           <th scope="col">Kontakt</th>
           <th scope="col">Bydlisko</th>
           <th scope="col">Počet dávok</th>
@@ -22,7 +22,6 @@
         <tr *ngFor="let osoba of osoby">
           <td>{{osoba.id}}</td>
           <td>{{osoba.meno + ' ' + osoba.priezvisko}}</td>
-          <td>{{osoba.datum_narodenia}}</td>
           <td>{{osoba.kontakt}}</td>
           <td>{{osoba.bydlisko}}</td>
           <td>0</td>

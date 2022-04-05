@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Osoba} from "../models/osoba.model";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
 import {OsobaService} from "../../osoba.service";
 
 @Component({
@@ -41,7 +41,7 @@ export class OsobaFormularComponent{
       email: new FormControl('',{
         validators: [Validators.required,Validators.pattern(this.emailRegex)], updateOn: 'blur',
       }),
-      datum_narodenia: new FormControl(null, Validators.required),
+      rodne_cislo: new FormControl(null, Validators.required),
       kontakt: new FormControl(null, [Validators.required, Validators.minLength(3)]),
       pohlavie: new FormControl(null),
       bydlisko: new FormControl(null, Validators.required)
@@ -57,7 +57,7 @@ export class OsobaFormularComponent{
     this.form.controls["meno"].setValue(osoba.meno);
     this.form.controls["priezvisko"].setValue(osoba.priezvisko);
     this.form.controls["email"].setValue(osoba.email);
-    this.form.controls["datum_narodenia"].setValue(osoba.datum_narodenia);
+    this.form.controls["rodne_cislo"].setValue(osoba.rodne_cislo);
     this.form.controls["kontakt"].setValue(osoba.kontakt);
     this.form.controls["pohlavie"].setValue(osoba.pohlavie);
     this.form.controls["bydlisko"].setValue(osoba.bydlisko);
