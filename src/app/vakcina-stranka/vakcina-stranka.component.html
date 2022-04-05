@@ -1,0 +1,17 @@
+<h1 class="col">Hlavná stránka vakcín</h1>
+
+<app-vakcina-formular [vakcina]="vakcinaNaUpravu"
+                      (pridajVakcinu) ="pridaj($event)"
+                      (upravVakcinu)="uprav($event)">
+</app-vakcina-formular>
+
+<app-vakcina-zoznam [vakciny]="vakciny"
+                    (upravVakcinu)="upravVakcinuZoZoznamu($event)"
+                    (zmazVakcinu)="zmazVakcinuZoZoznamu($event)">
+</app-vakcina-zoznam>
+
+<br>
+
+<div class="container">
+  <button id="naspäť" (click)="chodSpat()">Naspäť do hlavného menu</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="jumbotron text-center" style="background-color: aliceblue">
+  <h1 id="formular">Formulár na pridanie Vakcín </h1>
+</div>
+<br>
+
+<form [formGroup]="form">
+  <div class="container">
+    <div class="form-group">
+      <div class="row">
+
+        <label id="o1">Názov:</label>
+        <input class="form-control" formControlName="nazov">
+        <br>
+
+        <label id="o2">Výrobca:</label>
+        <input class="form-control" formControlName="vyrobca">
+        <br>
+
+        <label id="o3">Počet dávok:</label>
+        <input class="form-control" formControlName="pocet_davok">
+        <br>
+
+        <label id="o4">Trvácnosť:</label>
+        <input class="form-control" formControlName="trvacnost">
+        <br>
+
+        <button (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
+        <!--
+    <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
+    <button (click)="zrus();">ZRUŠ</button>
+       -->
+      </div>
+    </div>
+  </div>
+</form>
