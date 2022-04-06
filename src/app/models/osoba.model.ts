@@ -7,6 +7,7 @@ export class Osoba{
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
+  nazov: string;
 
 
   constructor(osoba: Osoba) {
@@ -18,6 +19,7 @@ export class Osoba{
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;
+    this.nazov = osoba.nazov;
   }
 }
 export class OsobaZoznam{
@@ -29,6 +31,7 @@ export class OsobaZoznam{
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
+  nazov: string;
 
   constructor(osoba: OsobaZoznam) {
     this.id = osoba.id;
@@ -39,5 +42,6 @@ export class OsobaZoznam{
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;
+    this.nazov = osoba.nazov;
   }
 }

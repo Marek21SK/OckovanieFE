@@ -9,23 +9,23 @@
     <table class="table" *ngIf="osoby.length > 0">
       <thead>
         <tr>
-          <th scope="col">ID</th>
           <th scope="col">Meno</th>
           <th scope="col">Kontakt</th>
           <th scope="col">Bydlisko</th>
           <th scope="col">Počet dávok</th>
           <th scope="col">Zaočkovanosť od</th>
+          <th scope="col">Názov vakcíny</th>
         </tr>
       </thead>
 
       <tbody>
         <tr *ngFor="let osoba of osoby">
-          <td>{{osoba.id}}</td>
           <td>{{osoba.meno + ' ' + osoba.priezvisko}}</td>
           <td>{{osoba.kontakt}}</td>
           <td>{{osoba.bydlisko}}</td>
           <td>0</td>
           <td>0</td>
+          <td>{{osoba.nazov}}</td>
             <!--
             <button (click)="uprav(osoba.id)">UPRAVIŤ</button>
             <button (click)="zmaz(osoba.id)">ZMAZAŤ</button>
