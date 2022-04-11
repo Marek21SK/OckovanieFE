@@ -13,6 +13,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { VakcinaFormularComponent } from './vakcina-formular/vakcina-formular.component';
 import { VakcinaStrankaComponent } from './vakcina-stranka/vakcina-stranka.component';
 import { VakcinaZoznamComponent } from './vakcina-zoznam/vakcina-zoznam.component';
+import {ButtonModule} from "primeng/button";
+import {RippleModule} from "primeng/ripple";
+import {InputTextModule} from "primeng/inputtext";
+import {TooltipModule} from "primeng/tooltip";
+import {PaginatorModule} from "primeng/paginator";
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -33,6 +39,12 @@ import { VakcinaZoznamComponent } from './vakcina-zoznam/vakcina-zoznam.componen
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ButtonModule,
+    RippleModule,
+    InputTextModule,
+    TooltipModule,
+    PaginatorModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

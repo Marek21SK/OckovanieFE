@@ -6,7 +6,7 @@ import {OsobaZoznam} from "../models/osoba.model";
   templateUrl: './osoba-zoznam.component.html',
   styleUrls: ['./osoba-zoznam.component.css']
 })
-export class OsobaZoznamComponent{
+export class OsobaZoznamComponent {
 
   @Input()
   osoby: OsobaZoznam[] = []
@@ -20,6 +20,7 @@ export class OsobaZoznamComponent{
   constructor() { }
 
 /**
+ * Funkčný kód na úpravu a zmazanie osoby
   uprav(osobaId: number): void{
     this.upravOsobu.emit(osobaId);
   }

@@ -38,7 +38,6 @@ export class OsobaStrankaComponent implements OnInit, OnDestroy{
   }
 
   pridaj(osoba: Osoba): void{
-    // this.osoby.push(osoba);
     this.subscription.add(this.osobaService.createOsoba(osoba).subscribe(data => {
       console.log('prislo', data);
       this.refreshOsob()

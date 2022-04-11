@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Osoba} from "../models/osoba.model";
-import {FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {OsobaService} from "../../osoba.service";
 
 @Component({
@@ -43,7 +43,7 @@ export class OsobaFormularComponent{
       }),
       rodne_cislo: new FormControl(null, Validators.required),
       kontakt: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      pohlavie: new FormControl(null),
+      pohlavie: new FormControl(null, Validators.required),
       bydlisko: new FormControl(null, Validators.required)
     });
   }
@@ -71,9 +71,11 @@ export class OsobaFormularComponent{
     }
   }
 /**
+ * Funkčné pridávanie
   public uprav(): void {
     this.upravOsobu.emit(this.form.value);
     this.form.reset();
+    alert("Naozaj chcete upraviť osobu?")
   }
 
   public zrus(): void{

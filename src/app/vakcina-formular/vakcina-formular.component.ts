@@ -62,6 +62,7 @@ export class VakcinaFormularComponent{
     }
   }
   /**
+   * Funkčné pridávanie
    public uprav(): void {
     this.upravVakcinu.emit(this.form.value);
     this.form.reset();

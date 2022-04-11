@@ -1,4 +1,4 @@
-<div class="jumbotron text-center" style="background-color: aliceblue">
+<div class="text-center" style="background-color: aliceblue">
   <h1 id="formular">Formulár na pridanie Osôb </h1>
 </div>
 <br>
@@ -6,18 +6,19 @@
 <form [formGroup]="form">
   <div class="container">
     <div class="form-group">
-      <div class="row">
+      <div class="grid p-fluid">
+        <div class="col-12 md:col-3">
 
       <label id="o1">Meno:</label>
-      <input class="form-control" formControlName="meno">
+      <input type="text" class="form-control" formControlName="meno" pInputText pTooltip="Vložte svoje meno" tooltipPosition="top">
       <br>
 
       <label id="o2">Priezvisko:</label>
-      <input class="form-control" formControlName="priezvisko">
+      <input type="text" class="form-control" formControlName="priezvisko" pInputText pTooltip="Vložte svoje priezvisko" tooltipPosition="top">
       <br>
 
       <label id="o3">Email:</label>
-      <input class="form-control" formControlName="email">
+      <input type="text" class="form-control" formControlName="email" pInputText pTooltip="Vložte svoj email" tooltipPosition="top">
         <!--
         <div *ngIf="form.controls['email'].valid && form.controls['email'].touched">
           <div *ngIf="form.controls['email'].errors?['required']:" style="background-color: red">
@@ -31,28 +32,32 @@
       <br>
 
       <label id="o4">Rodné číslo:</label>
-      <input class="form-control" formControlName="rodne_cislo">
+      <input type="text" class="form-control" formControlName="rodne_cislo" pInputText pTooltip="Vložte svoje rodné číslo" tooltipPosition="top">
       <br>
 
       <label id="o5">Kontakt:</label>
-      <input class="form-control" formControlName="kontakt">
+      <input type="text" class="form-control" formControlName="kontakt" pInputText pTooltip="Vložte svoj kontakt" tooltipPosition="top">
       <br>
 
         <label id="o7">Bydlisko:</label>
-        <input class="form-control" formControlName="bydlisko">
+        <input type="text" class="form-control" formControlName="bydlisko" pInputText pTooltip="Vložte svoje bydlisko" tooltipPosition="top">
         <br>
 
       <label id="o6">Pohlavie:</label>
-      <input type="radio" name="pohlavie" value="male">Chlap
-      <input type="radio" name="pohlavie" value="female">Žena
+        <select id="pohlavie" class="form-select" formControlName="pohlavie">
+        <option value="muž">Muž</option>
+        <option value="žena">Žena</option>
+        </select>
         <br>
         <br>
 
-      <button (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
+      <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
         <!--
+        Funkčné upravovanie osôb a button na zrušenie upravovania osôb.
     <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
     <button (click)="zrus();">ZRUŠ</button>
        -->
+        </div>
       </div>
     </div>
   </div>

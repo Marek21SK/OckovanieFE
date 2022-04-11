@@ -1,4 +1,4 @@
-<div class="jumbotron text-center" style="background-color: aliceblue">
+<div class="text-center" style="background-color: aliceblue">
   <h1 id="formular">Formulár na pridanie Vakcín </h1>
 </div>
 <br>
@@ -6,29 +6,32 @@
 <form [formGroup]="form">
   <div class="container">
     <div class="form-group">
-      <div class="row">
+      <div class="grid p-fluid">
+        <div class="col-12 md:col-3">
 
         <label id="o1">Názov:</label>
-        <input class="form-control" formControlName="nazov">
+        <input type="text" class="form-control" formControlName="nazov" tooltipEvent="focus">
         <br>
 
         <label id="o2">Výrobca:</label>
-        <input class="form-control" formControlName="vyrobca">
+        <input type="text" class="form-control" formControlName="vyrobca" tooltipEvent="focus">
         <br>
 
         <label id="o3">Počet dávok:</label>
-        <input class="form-control" formControlName="pocet_davok">
+        <input type="text" class="form-control" formControlName="pocet_davok" tooltipEvent="focus">
         <br>
 
         <label id="o4">Trvácnosť:</label>
-        <input class="form-control" formControlName="trvacnost">
+        <input type="text" class="form-control" formControlName="trvacnost" tooltipEvent="focus">
         <br>
 
-        <button (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
+        <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
         <!--
+        Funkčné upravovanie vakcín a button na zrušenie upravovania vakcín.
     <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
     <button (click)="zrus();">ZRUŠ</button>
        -->
+        </div>
       </div>
     </div>
   </div>
