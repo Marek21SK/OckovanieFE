@@ -1,46 +1,49 @@
 #formular{
   text-align: center;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   margin: auto;
-  padding: 5px;
+  padding: 25px;
 }
 .form-control{
   margin: 5px;
   padding: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
 }
 #o0{
   text-align: left;
   margin-right: 5px;
   padding-bottom: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: large;
 }
 #o1{
   text-align: left;
   margin-right: 5px;
   padding-bottom: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: large;
 }
 #o2{
   text-align: left;
   margin-right: 5px;
   padding-bottom: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: large;
 }
 #o3{
   text-align: left;
   margin-right: 5px;
   padding-bottom: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: large;
 }
 #o4{
   text-align: left;
   margin-right: 5px;
   padding-bottom: 5px;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: large;
+}
+#pridajB{
+  width: 80px
 }

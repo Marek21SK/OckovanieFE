@@ -1,0 +1,24 @@
+.container{
+  padding-top: 170px;
+  position: relative;
+  text-align: center;
+}
+#vakciny{
+  padding:30px;
+  margin-left:20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#osoby{
+  padding: 30px;
+  margin-left:20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+h1{
+  margin-top: 80px;
+  position: relative;
+  text-align: center;
+  font-family: "Apple Color Emoji", cursive;
+  font-weight: inherit;
+}
