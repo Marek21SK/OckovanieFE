@@ -38,9 +38,11 @@ export class OsobaFormularComponent{
       id: new FormControl(null),
       meno: new FormControl(null, Validators.required),
       priezvisko: new FormControl(null, Validators.required),
-      email: new FormControl('',{
-        validators: [Validators.required,Validators.pattern(this.emailRegex)], updateOn: 'blur',
-      }),
+      email: new FormControl(null, Validators.required),
+      /**'',  {
+        validators: [Validators.required, Validators.pattern(this.emailRegex)],
+        updateOn: 'blur',
+      }), */
       rodne_cislo: new FormControl(null, Validators.required),
       kontakt: new FormControl(null, [Validators.required, Validators.minLength(3)]),
       pohlavie: new FormControl(null, Validators.required),
@@ -48,9 +50,11 @@ export class OsobaFormularComponent{
     });
   }
 
+/**
   get validator(){
     return true;
   }
+ */
 
   private vyplnForm(osoba: Osoba): void{
     this.form.controls["id"].setValue(osoba.id);

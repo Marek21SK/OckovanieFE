@@ -1,0 +1,8 @@
+.gradient-custom {
+  background: -webkit-linear-gradient(to right, #6366F1, #EF4444);
+  background: linear-gradient(to right, #6366F1, #EF4444);
+}
+.text-white{
+  font-weight: bold;
+  font-family: "Apple Color Emoji", serif;
+}

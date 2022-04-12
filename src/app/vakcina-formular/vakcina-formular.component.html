@@ -10,19 +10,19 @@
         <div class="col-12 md:col-3">
 
         <label id="o1">Názov:</label>
-        <input type="text" class="form-control" formControlName="nazov" tooltipEvent="focus">
+        <input type="text" class="form-control" formControlName="nazov" tooltipEvent="focus" pInputText pTooltip="Názov vakcíny" tooltipPosition="top">
         <br>
 
         <label id="o2">Výrobca:</label>
-        <input type="text" class="form-control" formControlName="vyrobca" tooltipEvent="focus">
+        <input type="text" class="form-control" formControlName="vyrobca" tooltipEvent="focus" pInputText pTooltip="Výrobca" tooltipPosition="top">
         <br>
 
         <label id="o3">Počet dávok:</label>
-        <input type="text" class="form-control" formControlName="pocet_davok" tooltipEvent="focus">
+        <input type="text" class="form-control" formControlName="pocet_davok" tooltipEvent="focus" pInputText pTooltip="Koľko dávková vakcína" tooltipPosition="top">
         <br>
 
         <label id="o4">Trvácnosť:</label>
-        <input type="text" class="form-control" formControlName="trvacnost" tooltipEvent="focus">
+        <input type="text" class="form-control" formControlName="trvacnost" tooltipEvent="focus" pInputText pTooltip="Doba trvania vakcíny" tooltipPosition="top">
         <br>
 
         <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>

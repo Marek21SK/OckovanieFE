@@ -19,6 +19,8 @@ import {InputTextModule} from "primeng/inputtext";
 import {TooltipModule} from "primeng/tooltip";
 import {PaginatorModule} from "primeng/paginator";
 import {TableModule} from "primeng/table";
+import {FooterComponent} from "./footer/footer.component";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {TableModule} from "primeng/table";
     OsobaZoznamComponent,
     VakcinaFormularComponent,
     VakcinaStrankaComponent,
-    VakcinaZoznamComponent
+    VakcinaZoznamComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

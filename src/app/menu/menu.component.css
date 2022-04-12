@@ -2,6 +2,7 @@
   padding-top: 170px;
   position: relative;
   text-align: center;
+  justify-content: flex-start;
 }
 #vakciny{
   padding:30px;
@@ -21,4 +22,7 @@ h1{
   text-align: center;
   font-family: "Apple Color Emoji", cursive;
   font-weight: inherit;
+}
+button{
+  width:120px;
 }
