@@ -1,0 +1,12 @@
+p{
+  text-align: center;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  justify-content: space-around;
+  display: flex;
+  color: white;
+  font-weight: bold;
+}
+.gradient-custom {
+  background: -webkit-linear-gradient(to right, #6366F1, #EF4444);
+  background: linear-gradient(to right, #6366F1, #EF4444);
+}
