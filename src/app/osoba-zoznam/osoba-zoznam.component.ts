@@ -19,8 +19,6 @@ export class OsobaZoznamComponent {
 
   constructor() { }
 
-/**
- * Funkčný kód na úpravu a zmazanie osoby
   uprav(osobaId: number): void{
     this.upravOsobu.emit(osobaId);
   }
@@ -28,5 +26,4 @@ export class OsobaZoznamComponent {
   zmaz(osobaId: number): void{
     this.zmazOsobu.emit(osobaId);
   }
- */
 }

@@ -38,23 +38,13 @@ export class OsobaFormularComponent{
       id: new FormControl(null),
       meno: new FormControl(null, Validators.required),
       priezvisko: new FormControl(null, Validators.required),
-      email: new FormControl(null, Validators.required),
-      /**'',  {
-        validators: [Validators.required, Validators.pattern(this.emailRegex)],
-        updateOn: 'blur',
-      }), */
+      email: new FormControl(null, [Validators.required, Validators.pattern(this.emailRegex)]),
       rodne_cislo: new FormControl(null, Validators.required),
       kontakt: new FormControl(null, [Validators.required, Validators.minLength(3)]),
       pohlavie: new FormControl(null, Validators.required),
       bydlisko: new FormControl(null, Validators.required)
     });
   }
-
-/**
-  get validator(){
-    return true;
-  }
- */
 
   private vyplnForm(osoba: Osoba): void{
     this.form.controls["id"].setValue(osoba.id);
@@ -74,16 +64,16 @@ export class OsobaFormularComponent{
       alert("Udaje osoby boli zapísané do databázy")
     }
   }
-/**
- * Funkčné pridávanie
+
   public uprav(): void {
-    this.upravOsobu.emit(this.form.value);
-    this.form.reset();
-    alert("Naozaj chcete upraviť osobu?")
+    if (this.form.valid){
+      this.upravOsobu.emit(this.form.value);
+      alert("Naozaj chcete upraviť osobu?")
+      this.form.reset();
+    }
   }
 
   public zrus(): void{
     this.form.reset();
   }
- */
 }

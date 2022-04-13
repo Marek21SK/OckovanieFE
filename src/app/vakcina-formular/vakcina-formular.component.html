@@ -26,11 +26,9 @@
         <br>
 
         <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
-        <!--
-        Funkčné upravovanie vakcín a button na zrušenie upravovania vakcín.
-    <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
-    <button (click)="zrus();">ZRUŠ</button>
-       -->
+        <button pButton id="upravB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre upravenie" (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
+        <button pButton id="zrusB" type="button" icon="pi pi-check" (click)="zrus();">ZRUŠ</button>
+
         </div>
       </div>
     </div>

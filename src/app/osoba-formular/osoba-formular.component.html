@@ -20,16 +20,14 @@
           <label id="o3">Email:</label>
           <input type="email" name="email" class="form-control" formControlName="email" tooltipEvent="focus" pInputText pTooltip="Vložte svoj email" tooltipPosition="top">
 
-            <!--
            <div *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
-           <div *ngIf="form.controls['email'].errors?['required']" style=" background-color: red">
-            Zadajte email
-          </div>
-          <div *ngIf="form.controls['email'].errors?['required']" style="background-color: red">
-            Neplatný email
+             <div *ngIf="form.controls['email'].errors?.['required']" id="vlozemail">
+               <small>Zadajte email</small>
             </div>
+            <div *ngIf="form.controls['email'].errors?.['pattern']" id="vlozemail2">
+              <small>Vložili ste neplatný email</small>
+              </div>
           </div>
-          -->
           <br>
 
           <label id="o4">Rodné číslo:</label>
@@ -53,11 +51,9 @@
           <br>
 
           <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
-            <!--
-             Funkčné upravovanie osôb a button na zrušenie upravovania osôb.
-          <button (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
-          <button (click)="zrus();">ZRUŠ</button>
-           -->
+          <button pButton id="upravB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre upravenie" (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
+          <button pButton id="zrusB" type="button" icon="pi pi-check" (click)="zrus();">ZRUŠ</button>
+
         </div>
       </div>
     </div>

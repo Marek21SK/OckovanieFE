@@ -61,14 +61,16 @@ export class VakcinaFormularComponent{
       alert("Udaje vakcíny boli zapísané do databázy")
     }
   }
-  /**
-   * Funkčné pridávanie
+
    public uprav(): void {
+    if (this.form.valid){
     this.upravVakcinu.emit(this.form.value);
+     alert("Naozaj chcete upraviť vakcínu?")
     this.form.reset();
+    }
   }
+
    public zrus(): void{
     this.form.reset();
   }
-   */
 }

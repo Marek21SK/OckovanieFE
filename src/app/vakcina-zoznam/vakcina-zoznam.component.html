@@ -13,6 +13,7 @@
         <th scope="col">Výrobca</th>
         <th scope="col">Počet dávok</th>
         <th scope="col">Vakcína platná do</th>
+        <th scope="col">Uprav/Zmaž</th>
       </tr>
       </thead>
 
@@ -22,6 +23,10 @@
         <td>{{vakcina.vyrobca}}</td>
         <td>{{vakcina.pocet_davok}}</td>
         <td>{{vakcina.trvacnost}}</td>
+
+        <button (click)="uprav(vakcina.id)">UPRAVIŤ</button>
+        <button (click)="zmaz(vakcina.id)">ZMAZAŤ</button>
+
       </tr>
       </tbody>
     </table>

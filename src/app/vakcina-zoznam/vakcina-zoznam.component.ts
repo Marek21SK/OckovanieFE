@@ -19,13 +19,10 @@ export class VakcinaZoznamComponent{
 
   constructor() { }
 
-  /**
-   * Funkčný kód na úpravu a zmazanie vakcín
    uprav(osobaId: number): void{
-    this.upravOsobu.emit(osobaId);
+    this.upravVakcinu.emit(osobaId);
   }
    zmaz(osobaId: number): void{
-    this.zmazOsobu.emit(osobaId);
+    this.zmazVakcinu.emit(osobaId);
   }
-   */
 }

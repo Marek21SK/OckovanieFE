@@ -68,6 +68,12 @@
 #pridajB{
   width: 80px
 }
+#upravB{
+  width: 80px;
+}
+#zrusB{
+  width: 80px;
+}
 #pohlavie{
   font-family: "Times New Roman", serif;
   font-weight: inherit;
@@ -76,4 +82,27 @@
   border-collapse: initial;
   border-color: black;
   position: relative;
+}
+#vlozemail{
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  border-radius: 15px;
+  background: red;
+  width:100px;
+  text-align: center;
+}
+#vlozemail2{
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  border-radius: 15px;
+  background: red;
+  width:150px;
+  text-align: center;
+}
+small{
+  font-weight: bold;
+  font-family:"Times New Roman", serif;
+  font-size: small;
 }
