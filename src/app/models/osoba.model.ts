@@ -7,7 +7,9 @@ export class Osoba{
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
-  nazov: string;
+  nazovVakciny: string;
+  pocet_davok: number;
+  zaockovanostDo: Date;
 
 
   constructor(osoba: Osoba) {
@@ -19,7 +21,9 @@ export class Osoba{
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;
-    this.nazov = osoba.nazov;
+    this.nazovVakciny = osoba.nazovVakciny;
+    this.pocet_davok = osoba.pocet_davok;
+    this.zaockovanostDo = osoba.zaockovanostDo;
   }
 }
 export class OsobaZoznam{
@@ -31,7 +35,9 @@ export class OsobaZoznam{
   kontakt: string;
   pohlavie: string;
   bydlisko: string;
-  nazov: string;
+  nazovVakciny: string;
+  pocet_davok: number;
+  zaockovanostDo: Date;
 
   constructor(osoba: OsobaZoznam) {
     this.id = osoba.id;
@@ -42,6 +48,8 @@ export class OsobaZoznam{
     this.kontakt = osoba.kontakt;
     this.pohlavie = osoba.pohlavie;
     this.bydlisko = osoba.bydlisko;
-    this.nazov = osoba.nazov;
+    this.nazovVakciny = osoba.nazovVakciny;
+    this.pocet_davok = osoba.pocet_davok;
+    this.zaockovanostDo = osoba.zaockovanostDo;
   }
 }
