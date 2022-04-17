@@ -21,6 +21,9 @@ import {PaginatorModule} from "primeng/paginator";
 import {TableModule} from "primeng/table";
 import {FooterComponent} from "./footer/footer.component";
 import { NavbarComponent } from './navbar/navbar.component';
+import { VakcinaciaFormularComponent } from './vakcinacia-formular/vakcinacia-formular.component';
+import { VakcinaciaStrankaComponent } from './vakcinacia-stranka/vakcinacia-stranka.component';
+import { VakcinaciaZoznamComponent } from './vakcinacia-zoznam/vakcinacia-zoznam.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     VakcinaStrankaComponent,
     VakcinaZoznamComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    VakcinaciaFormularComponent,
+    VakcinaciaStrankaComponent,
+    VakcinaciaZoznamComponent
   ],
   imports: [
     BrowserModule,
