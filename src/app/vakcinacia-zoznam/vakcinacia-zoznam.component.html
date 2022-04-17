@@ -1,0 +1,34 @@
+<div class="container">
+  <h3>Zoznam vakcinácií</h3>
+  <div *ngIf="!vakcinacie || vakcinacie?.length === 0">
+    <div>
+      Zoznam vakcinácií je prázdny.
+    </div>
+  </div>
+  <div>
+    <table class="table" *ngIf="vakcinacie.length > 0">
+      <thead>
+      <tr>
+        <th scope="col">Meno a priezvisko</th>
+        <th scope="col">Názov vakcíny</th>
+        <th scope="col">Počet dávok</th>
+        <th scope="col">Zaočkovanosť do</th>
+        <th scope="col">Zmaž</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let vakcinacia of vakcinacie">
+        <td>{{vakcinacia.meno + ' ' + vakcinacia.priezvisko}}</td>
+        <td>{{vakcinacia.nazovVakciny}}</td>
+        <td>{{vakcinacia.pocetDavok}}</td>
+        <td>{{vakcinacia.zaockovanostDo}}</td>
+
+        <button (click)="zmaz(vakcinacia.id)">ZMAZAŤ</button>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
