@@ -10,6 +10,13 @@
   margin-bottom: 20px;
   margin-right: 20px;
 }
+#vakcinacia{
+  padding:30px;
+  margin-left:20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
 #osoby{
   padding: 30px;
   margin-left:20px;
