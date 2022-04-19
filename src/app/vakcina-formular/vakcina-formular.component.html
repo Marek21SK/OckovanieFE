@@ -22,7 +22,7 @@
         <br>
 
         <label id="o4">Trvácnosť:</label>
-        <input type="text" class="form-control" formControlName="trvacnost" tooltipEvent="focus" pInputText pTooltip="Doba trvania vakcíny" tooltipPosition="top">
+        <input type="text" class="form-control" formControlName="trvacnost" tooltipEvent="focus" pInputText pTooltip="Doba trvania vakcíny v dňoch" tooltipPosition="top">
         <br>
 
         <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
