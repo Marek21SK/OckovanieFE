@@ -1,46 +1,11 @@
-<!--
-<div *ngIf="submitted===false">
-  <h1 class="h-center">Nová vakcinácia</h1>
-  <br>
+<div class="text-center" style="background-color: aliceblue">
+  <h1>
+    Na tejto časti stránky ešte pracujeme
+  </h1>
 
-  <form [formGroup]="form" >
-    <label>Osoba</label>
-    <select formControlName="osobaId" [ngClass]="{'select-error': form.get('osobaId').invalid && form.get('osobaId').touched, 'select-fill': form.get('osobaId').valid}">
-      <option [hidden]="true" [disabled]="true" [ngValue]="null"> &nbsp; Vyberte osobu...</option>
-      <option title="osoba" value="{{osoba.id}}" *ngFor="let osoba of osoby">{{osoba.meno}}&nbsp;{{osoba.priezvisko}}</option>
-    </select>
-    <span class="error-message" *ngIf="form.get('customerId').invalid && form.get('customerId').touched">Prosím, vyberte si osobu pre vakcináciu.</span>
-    <span class="success-message" *ngIf="form.get('customerId').valid">Osoba je overená</span>
-    <br>
+  <!--
+  <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
+  <button pButton id="zrusB" type="button" icon="pi pi-check" (click)="zrus();">ZRUŠ</button>
+  -->
 
-    <label>Vakcína</label>
-    <select formControlName="vakcinaId" [ngClass]="{'select-error': form.get('vakcinaId').invalid && form.get('vakcinaId').touched, 'select-fill': form.get('vakcinaId').valid }">
-      <option disabled hidden [ngValue]="null"> &nbsp; Vyberte vakcínu...</option>
-      <option  value="{{vakcina.id}}"  *ngFor="let vakcina of vakciny">  {{vakcina.nazov}} </option>
-    </select>
-    <span class="success-message" *ngIf="form.get('vakcinaId').valid">Vakcína</span>
-    <hr style="margin-top: 0" class="hr-custom">
-    <div class="radio-buttons-title"> <div style="margin-right: 4px">Vakcína je platná do</div> <div class="tooltip"><i class="icon-info"></i>
-       <span class="tooltiptext">Platnosť {{zaockovanostDo}}</span>
-    </div></div>
-    <br>
-
-    <button type="submit" [disabled]="form.invalid"  class="md-mrg btn-focus" (click)="pridaj()" *ngIf="form.value.id === null">Pridať vakcináciu</button>
-  </form>
 </div>
-
-<div class="modal-container" *ngIf="submitted===true">
-  <div class="success-checkmark">
-    <div class="check-icon">
-      <span class="icon-line line-tip"></span>
-      <span class="icon-line line-long"></span>
-      <div class="icon-circle"></div>
-      <div class="icon-fix"></div>
-    </div>
-  </div>
-
-  <div style="margin-bottom: 16px; margin-top: 16px"><span color="#24262F" style="font-size: 18px">Nová vakcinácia bola pridaná &nbsp; </span>
-
-  </div>
-</div>
--->

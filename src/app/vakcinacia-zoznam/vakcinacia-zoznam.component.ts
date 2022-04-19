@@ -27,4 +27,8 @@ export class VakcinaciaZoznamComponent{
   zmaz(vakcinaciaId: number): void{
     this.zmazVakcinaciu.emit(vakcinaciaId);
   }
+
+  uprav(vakcinaciaId: number): void{
+    this.upravVakcinaciu.emit(vakcinaciaId);
+  }
 }

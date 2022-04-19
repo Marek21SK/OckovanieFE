@@ -1,5 +1,9 @@
 <h1 class="col">Hlavná stránka Vakcinácie</h1>
 
+<app-vakcinacia-formular (pridajVakcinaciu)="pridaj($event)">
+
+</app-vakcinacia-formular>
+
 <app-vakcinacia-zoznam [vakcinacie]="vakcinacie" [osoby]="osoby"
                   (zmazVakcinaciu)="zmazVakcinaciuZoZoznamu($event)">
 </app-vakcinacia-zoznam>

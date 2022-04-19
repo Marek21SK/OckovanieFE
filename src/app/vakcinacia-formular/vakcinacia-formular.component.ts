@@ -33,6 +33,9 @@ export class VakcinaciaFormularComponent{
   @Output()
   pridajVakcinaciu = new EventEmitter<Vakcinacia>();
 
+  @Output()
+  zmazVakcinaciu = new EventEmitter<Vakcinacia>();
+
   form!: FormGroup;
   submitted = false;
 
@@ -66,5 +69,9 @@ export class VakcinaciaFormularComponent{
       alert("Údaje vakcinácie boli zapísané do databázy")
       this.form.reset();
     }
+  }
+
+  public zrus(): void{
+    this.form.reset();
   }
 }
