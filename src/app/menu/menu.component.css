@@ -9,6 +9,7 @@
   margin-left:20px;
   margin-bottom: 20px;
   margin-right: 20px;
+  display: inline;
 }
 #vakcinacia{
   padding:30px;
@@ -22,6 +23,7 @@
   margin-left:20px;
   margin-bottom: 20px;
   margin-right: 20px;
+  display: inline;
 }
 h1{
   margin-top: 80px;
@@ -31,5 +33,6 @@ h1{
   font-weight: inherit;
 }
 button{
-  width:120px;
+  width:200px !important;
+  font-size: 30px;
 }
