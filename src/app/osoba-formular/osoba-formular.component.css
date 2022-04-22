@@ -1,6 +1,8 @@
 #formular{
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family: Verdana, serif;
+  font-weight: bold;
+  font-size: 30px;
   margin: auto;
   padding: 25px;
 }
@@ -106,3 +108,4 @@ small{
   font-family:"Times New Roman", serif;
   font-size: small;
 }
+

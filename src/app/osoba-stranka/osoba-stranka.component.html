@@ -1,4 +1,5 @@
-<h1 class="col">Hlavná stránka zaočkovaných osôb</h1>
+<app-navbar></app-navbar>
+<h1 class="col" id="grad">Hlavná stránka zaočkovaných osôb</h1>
 
 <app-osoba-formular [osoba]="osobaNaUpravu"
                     (pridajOsobu) ="pridaj($event)"
@@ -15,3 +16,4 @@
 <div class="container">
   <button id="naspäť" pButton pRipple type="button" class="p-button-rounded p-button-warning" (click)="chodSpat()">Naspäť do hlavného menu</button>
 </div>
+<app-footer></app-footer>
