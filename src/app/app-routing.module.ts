@@ -4,6 +4,7 @@ import {OsobaStrankaComponent} from "./osoba-stranka/osoba-stranka.component";
 import {MenuComponent} from "./menu/menu.component";
 import {VakcinaStrankaComponent} from "./vakcina-stranka/vakcina-stranka.component";
 import {VakcinaciaStrankaComponent} from "./vakcinacia-stranka/vakcinacia-stranka.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const routes: Routes =[
@@ -22,6 +23,10 @@ const routes: Routes =[
   {
     path: 'vakcinacia',
     component: VakcinaciaStrankaComponent
+  },
+  {
+    path: 'prihlasenie',
+    component: LoginComponent
   }
 ]
 
