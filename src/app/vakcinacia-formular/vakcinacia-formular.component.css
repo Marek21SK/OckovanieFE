@@ -10,4 +10,9 @@ h1{
 }
 #zrusB{
   width: 80px;
-}
+}#formular{
+   text-align: center;
+   font-family: "Verdana", serif;
+   margin: auto;
+   padding: 25px;
+ }

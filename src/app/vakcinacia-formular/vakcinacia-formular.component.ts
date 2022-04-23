@@ -50,6 +50,7 @@ export class VakcinaciaFormularComponent{
       osobaId: new FormControl(null, Validators.required),
       meno: new FormControl(null, Validators.required),
       priezvisko: new FormControl(null, Validators.required),
+      nazovVakciny: new FormControl(null, Validators.required),
       zaockovanostDo: new FormControl(null, Validators.required)
     });
   }
@@ -60,6 +61,7 @@ export class VakcinaciaFormularComponent{
     this.form.controls["osobaId"].setValue(vakcinacia.osobaId);
     this.form.controls["meno"].setValue(vakcinacia.meno);
     this.form.controls["priezvisko"].setValue(vakcinacia.priezvisko);
+    this.form.controls["nazovVakciny"].setValue(vakcinacia.nazovVakciny);
     this.form.controls["zaockovanostDo"].setValue(vakcinacia.zaockovanostDo);
   }
 
@@ -69,9 +71,5 @@ export class VakcinaciaFormularComponent{
       alert("Údaje vakcinácie boli zapísané do databázy")
       this.form.reset();
     }
-  }
-
-  public zrus(): void{
-    this.form.reset();
   }
 }

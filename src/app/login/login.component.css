@@ -20,7 +20,7 @@ main {
   justify-content: center;
   height: 75vh;
   width: 100%;
-  background: url(https://publichealth.jhu.edu/sites/default/files/styles/article_feature_retina/public/2022-01/vaccines-gettyimages-1289345741.jpeg?h=f7026c63&itok=HMh9nPXz) no-repeat center center;
+  background: url(../../assets/vaccines-gettyimages.jpeg) no-repeat center center;
   background-size: cover;
 }
 footer {

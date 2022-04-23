@@ -11,7 +11,10 @@
       <tr>
         <th scope="col">ID vakcíny</th>
         <th scope="col">ID osoby</th>
+        <th scope="col">Meno a priezvisko</th>
         <th scope="col">Názov vakcíny</th>
+        <th scope="col">Zaočkovanosť od</th>
+        <th scope="col">Zaočkovanosť do</th>
         <th scope="col">Zmaž</th>
       </tr>
       </thead>
@@ -20,7 +23,9 @@
       <tr *ngFor="let vakcinacia of vakcinacie">
         <td>{{vakcinacia.vakcinaId}}</td>
         <td>{{vakcinacia.osobaId}}</td>
+        <td>{{vakcinacia.meno + ' ' +vakcinacia.priezvisko}}</td>
         <td>{{vakcinacia.nazovVakciny}}</td>
+        <td>{{vakcinacia.zaockovanostDo}}</td>
 
         <!--
         <button (click)="uprav(vakcinacia.id)">UPRAVIŤ</button>
