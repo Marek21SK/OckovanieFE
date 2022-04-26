@@ -1,5 +1,7 @@
 <div class="container">
   <h3 class="NadpisZ">Zoznam zaočkovaných osôb</h3>
+  <hr/>
+  <h3>Zoznam zaočkovaných osôb</h3>
   <div *ngIf="!osoby || osoby?.length === 0">
   <div>
     Zoznam zaočkovaných osôb je prázdny.
@@ -25,6 +27,7 @@
           <td>{{osoba.kontakt}}</td>
           <td>{{osoba.bydlisko}}</td>
           <td>{{osoba.pocet_davok}}</td>
+          <td>{{osoba.zaockovanostOd}}</td>
           <td>{{osoba.zaockovanostDo}}</td>
           <td>{{osoba.nazovVakciny}}</td>
 

@@ -1,5 +1,6 @@
 <div class="container">
-  <h3>Zoznam vakcín</h3>
+  <hr/>
+  <h3 class="nadpisZ">Zoznam vakcín</h3>
   <div *ngIf="!vakciny || vakciny?.length === 0">
     <div>
       Zoznam dostupných vakcín je prázdny.
@@ -9,11 +10,11 @@
     <table class="table" *ngIf="vakciny.length > 0">
       <thead>
       <tr>
-        <th scope="col">Názov vakcíny</th>
-        <th scope="col">Výrobca</th>
-        <th scope="col">Počet dávok</th>
-        <th scope="col">Vakcína platná do</th>
-        <th scope="col">Uprav/Zmaž</th>
+        <th class="thead" scope="col">Názov vakcíny</th>
+        <th class="thead" scope="col">Výrobca</th>
+        <th class="thead" scope="col">Počet dávok</th>
+        <th class="thead" scope="col">Vakcína platná do</th>
+        <th class="thead" scope="col">Uprav/Zmaž</th>
       </tr>
       </thead>
 
@@ -24,8 +25,8 @@
         <td>{{vakcina.pocet_davok}}</td>
         <td>{{vakcina.trvacnost}}</td>
 
-        <button (click)="uprav(vakcina.id)">UPRAVIŤ</button>
-        <button (click)="zmaz(vakcina.id)">ZMAZAŤ</button>
+        <button class="buttons" (click)="uprav(vakcina.id)">UPRAVIŤ</button>
+        <button class="buttons" (click)="zmaz(vakcina.id)">ZMAZAŤ</button>
 
       </tr>
       </tbody>

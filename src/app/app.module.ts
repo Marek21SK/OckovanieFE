@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -8,7 +8,7 @@ import { OsobaZoznamComponent } from './osoba-zoznam/osoba-zoznam.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { VakcinaFormularComponent } from './vakcina-formular/vakcina-formular.component';
 import { VakcinaStrankaComponent } from './vakcina-stranka/vakcina-stranka.component';
@@ -24,6 +24,23 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { VakcinaciaFormularComponent } from './vakcinacia-formular/vakcinacia-formular.component';
 import { VakcinaciaStrankaComponent } from './vakcinacia-stranka/vakcinacia-stranka.component';
 import { VakcinaciaZoznamComponent } from './vakcinacia-zoznam/vakcinacia-zoznam.component';
+import { LoginComponent } from './login/login.component';
+import {NullValidationHandler, OAuthModule, OAuthService} from "angular-oauth2-oidc";
+import {AuthInterceptor} from "../AuthInterceptor";
+import {authCodeFlowConfig} from "../AuthConfig";
+
+
+function init_app(oauthService: OAuthService) {
+  return () => configureWithNewConfigApi(oauthService);
+}
+
+function configureWithNewConfigApi(oauthService: OAuthService) {
+  oauthService.configure(authCodeFlowConfig);
+  oauthService.tokenValidationHandler = new NullValidationHandler();
+  oauthService.setupAutomaticSilentRefresh();
+  oauthService.events.subscribe(e => { });
+  return oauthService.loadDiscoveryDocumentAndTryLogin();
+}
 
 @NgModule({
   declarations: [
@@ -39,7 +56,8 @@ import { VakcinaciaZoznamComponent } from './vakcinacia-zoznam/vakcinacia-zoznam
     NavbarComponent,
     VakcinaciaFormularComponent,
     VakcinaciaStrankaComponent,
-    VakcinaciaZoznamComponent
+    VakcinaciaZoznamComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +72,24 @@ import { VakcinaciaZoznamComponent } from './vakcinacia-zoznam/vakcinacia-zoznam
     InputTextModule,
     TooltipModule,
     PaginatorModule,
-    TableModule
+    TableModule,
+    OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+    provide: APP_INITIALIZER,
+    useFactory: init_app,
+    deps: [
+      OAuthService
+    ],
+    multi: true
+  },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
