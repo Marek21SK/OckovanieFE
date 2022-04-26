@@ -1,6 +1,8 @@
-.gradient-custom {
+footer{
   background: -webkit-linear-gradient(to right, #6366F1, #EF4444);
   background: linear-gradient(to right, #6366F1, #EF4444);
+  width: auto;
+  height: auto;
 }
 .text-white{
   font-weight: bold;

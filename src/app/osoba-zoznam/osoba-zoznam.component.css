@@ -2,17 +2,16 @@ th{
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 2px solid #FFFFFF;
-  text-align: center;
-  background: rgb(239, 255, 253)
+  border: 1px solid #999;
+  background-color:#FF8A8A;
 }
 td{
   margin: 5px;
-  padding: 10px;
+  padding: 5px;
   font-weight: normal;
-  font-family: Verdana, serif;
+  font-family: "Times New Roman", serif;
   text-align: center;
-  border: 2px groove;
+  border: 1px groove;
 }
 table{
   border-top-style: groove;
@@ -21,11 +20,17 @@ table{
   border-bottom-style: groove;
   text-align: center;
 }
-.thead{
-  background: #EF4444;
+hr {
+  display: block;
+  margin-end: auto;
+  margin-start: auto;
+  border: 1px inset;
+  overflow: hidden;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
 }
-tr:nth-child(even) {background-color: #EF4444;}
-tr:nth-child(odd) {background-color:  #6366F1;}
+tr:nth-child(even) {background-color: #FFCCCB;}
+tr:nth-child(odd) {background-color:  #d4ebf2;}
 
 .buttons{
   padding: 5px;

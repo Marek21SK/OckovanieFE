@@ -2,16 +2,16 @@ th{
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 2px solid #FFFFFF;
+  border: 1px solid #999;
   background: rgb(239, 255, 253)
 }
 td{
   margin: 5px;
-  padding: 10px;
+  padding: 5px;
   font-weight: normal;
-  font-family: "Verdana", serif;
+  font-family: "Times New Roman", serif;
   text-align: center;
-  border: 2px groove;
+  border: 1px groove;
 }
 table{
   border-top-style: groove;
@@ -19,9 +19,6 @@ table{
   border-left-style: groove;
   border-bottom-style: groove;
   text-align: center;
-}
-.thead{
-  background: #EF4444;
 }
 tr:nth-child(even) {background-color: #e8f4f8;}
 tr:nth-child(odd) {background-color: #d4ebf2;}

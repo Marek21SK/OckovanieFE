@@ -1,5 +1,6 @@
 <div class="container">
-  <h3>Zoznam vakcinácií</h3>
+  <hr/>
+  <h3 class="nadpisS">Zoznam vakcinácií</h3>
   <div *ngIf="!vakcinacie || vakcinacie?.length === 0">
     <div>
       Zoznam vakcinácií je prázdny.
@@ -22,7 +23,7 @@
       <tr *ngFor="let vakcinacia of vakcinacie">
         <td>{{vakcinacia.vakcinaId}}</td>
         <td>{{vakcinacia.osobaId}}</td>
-        <td>{{vakcinacia.meno + ' ' +vakcinacia.priezvisko}}</td>
+        <td><!--{{vakcinacia.meno + ' ' +vakcinacia.priezvisko}}--></td>
         <td>{{vakcinacia.nazovVakciny}}</td>
         <td>{{vakcinacia.zaockovanostDo}}</td>
 

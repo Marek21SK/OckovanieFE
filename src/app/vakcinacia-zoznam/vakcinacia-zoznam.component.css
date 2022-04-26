@@ -22,3 +22,19 @@ table{
 }
 tr:nth-child(even) {background-color: #e8f4f8;}
 tr:nth-child(odd) {background-color: #d4ebf2;}
+hr {
+  display: block;
+  margin-end: auto;
+  margin-start: auto;
+  border: 1px inset;
+  overflow: hidden;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
+}
+.nadpisS{
+  text-align: center;
+  font-family: Verdana, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+

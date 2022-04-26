@@ -1,6 +1,8 @@
 #formular{
   text-align: center;
-  font-family: "Verdana", serif;
+  font-family: Verdana, serif;
+  font-weight: bold;
+  font-size: 30px;
   margin: auto;
   padding: 25px;
 }
