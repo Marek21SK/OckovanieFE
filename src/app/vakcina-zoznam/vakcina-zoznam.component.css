@@ -2,16 +2,16 @@ th{
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 1px solid #999;
+  border: 2px solid #FFFFFF;
   background: rgb(239, 255, 253)
 }
 td{
   margin: 5px;
-  padding: 5px;
+  padding: 10px;
   font-weight: normal;
-  font-family: "Times New Roman", serif;
+  font-family: "Verdana", serif;
   text-align: center;
-  border: 1px groove;
+  border: 2px groove;
 }
 table{
   border-top-style: groove;
@@ -20,18 +20,11 @@ table{
   border-bottom-style: groove;
   text-align: center;
 }
+.thead{
+  background: #EF4444;
+}
 tr:nth-child(even) {background-color: #e8f4f8;}
 tr:nth-child(odd) {background-color: #d4ebf2;}
-.col-md-6{
-  color: white;
-  font-size: large;
-  font-family: "Times New Roman", serif;
-  font-weight: bold;
-  border-radius: 25px;
-  background: red;
-  width:350px;
-  text-align: center;
-}
 hr {
   display: block;
   margin-end: auto;
@@ -41,7 +34,13 @@ hr {
   margin-before: 0.5em;
   margin-after: 0.5em;
 }
-h3{
-  padding-top: 10px;
-  padding-bottom: 10px;
+.buttons{
+  padding: 5px;
+  margin: 5px;
+}
+.nadpisZ{
+  text-align: center;
+  font-family: Verdana, serif;
+  font-weight: bold;
+  font-size: 20px;
 }
