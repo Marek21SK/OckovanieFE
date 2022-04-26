@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Zoznam zaočkovaných osôb</h3>
+  <h3 class="NadpisZ">Zoznam zaočkovaných osôb</h3>
   <div *ngIf="!osoby || osoby?.length === 0">
   <div>
     Zoznam zaočkovaných osôb je prázdny.
@@ -9,13 +9,13 @@
     <table class="table" *ngIf="osoby.length > 0">
       <thead>
         <tr>
-          <th scope="col">Meno</th>
-          <th scope="col">Kontakt</th>
-          <th scope="col">Bydlisko</th>
-          <th scope="col">Počet dávok</th>
-          <th scope="col">Zaočkovanosť do</th>
-          <th scope="col">Názov vakcíny</th>
-          <th scope="col">Uprav/Zmaž</th>
+          <th class="thead" scope="col">Meno</th>
+          <th class="thead" scope="col">Kontakt</th>
+          <th class="thead" scope="col">Bydlisko</th>
+          <th class="thead" scope="col">Počet dávok</th>
+          <th class="thead" scope="col">Zaočkovanosť do</th>
+          <th class="thead" scope="col">Názov vakcíny</th>
+          <th class="thead" scope="col">Uprav/Zmaž</th>
         </tr>
       </thead>
 
@@ -28,8 +28,8 @@
           <td>{{osoba.zaockovanostDo}}</td>
           <td>{{osoba.nazovVakciny}}</td>
 
-            <button (click)="uprav(osoba.id)">UPRAVIŤ</button>
-            <button (click)="zmaz(osoba.id)">ZMAZAŤ</button>
+            <button class="buttons" (click)="uprav(osoba.id)">UPRAVIŤ</button>
+            <button class="buttons" (click)="zmaz(osoba.id)">ZMAZAŤ</button>
 
         </tr>
       </tbody>

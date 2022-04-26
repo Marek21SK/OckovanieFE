@@ -3,7 +3,7 @@
 </div>
 <br>
 
-<form [formGroup]="form">
+<form [formGroup]="form" style="background-image: ">
   <div class="container">
     <div class="form-group">
       <div class="grid p-fluid">
@@ -41,15 +41,13 @@
           <label id="o7">Bydlisko:</label>
           <input type="text" class="form-control" formControlName="bydlisko" tooltipEvent="focus" pInputText pTooltip="Vložte svoje bydlisko" tooltipPosition="top">
           <br>
-
           <label id="o6">Pohlavie:</label>
-            <select id="pohlavie" class="form-select" formControlName="pohlavie">
+          <select id="pohlavie" class="form-select" formControlName="pohlavie">
             <option value="muž">Muž</option>
             <option value="žena">Žena</option>
           </select>
           <br>
           <br>
-
           <button pButton id="pridajB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre potvrdenie" (click)="pridaj();" *ngIf="form.value.id === null" [disabled]="!this.form.valid">PRIDAJ</button>
           <button pButton id="upravB" type="button" icon="pi pi-check" pTooltip="Kliknúť pre upravenie" (click)="uprav();" *ngIf="form.value.id !== null" [disabled]="!this.form.valid">UPRAV</button>
           <button pButton id="zrusB" type="button" icon="pi pi-check" (click)="zrus();">ZRUŠ</button>
