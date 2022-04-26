@@ -46,12 +46,12 @@ export class VakcinaciaFormularComponent{
   private vytvorForm(): void{
     this.form = new FormGroup({
       id: new FormControl(null),
-      vakcinaId: new FormControl(null, [Validators.required]),
-      osobaId: new FormControl(null, Validators.required),
-      meno: new FormControl(null, Validators.required),
-      priezvisko: new FormControl(null, Validators.required),
-      nazovVakciny: new FormControl(null, Validators.required),
-      zaockovanostDo: new FormControl(null, Validators.required)
+      vakcinaId: new FormControl(null),
+      osobaId: new FormControl(null),
+      meno: new FormControl(null),
+      priezvisko: new FormControl(null),
+      nazovVakciny: new FormControl(null),
+      zaockovanostDo: new FormControl(null)
     });
   }
 

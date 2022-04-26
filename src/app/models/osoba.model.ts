@@ -10,6 +10,7 @@ export class Osoba{
   nazovVakciny: string;
   pocet_davok: number;
   zaockovanostDo: Date;
+  zaockovanostOd: Date;
 
 
   constructor(osoba: Osoba) {
@@ -24,6 +25,7 @@ export class Osoba{
     this.nazovVakciny = osoba.nazovVakciny;
     this.pocet_davok = osoba.pocet_davok;
     this.zaockovanostDo = osoba.zaockovanostDo;
+    this.zaockovanostOd = osoba.zaockovanostOd;
   }
 }
 export class OsobaZoznam{
@@ -38,6 +40,7 @@ export class OsobaZoznam{
   nazovVakciny: string;
   pocet_davok: number;
   zaockovanostDo: Date;
+  zaockovanostOd: Date;
 
   constructor(osoba: OsobaZoznam) {
     this.id = osoba.id;
@@ -51,5 +54,6 @@ export class OsobaZoznam{
     this.nazovVakciny = osoba.nazovVakciny;
     this.pocet_davok = osoba.pocet_davok;
     this.zaockovanostDo = osoba.zaockovanostDo;
+    this.zaockovanostOd = osoba.zaockovanostOd;
   }
 }
