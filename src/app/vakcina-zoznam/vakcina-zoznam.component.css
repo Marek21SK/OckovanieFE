@@ -3,7 +3,7 @@ th{
   padding: 10px;
   text-align: center;
   border: 1px solid #999;
-  background: rgb(239, 255, 253)
+  background: #FF8A8A;
 }
 td{
   margin: 5px;
@@ -20,7 +20,7 @@ table{
   border-bottom-style: groove;
   text-align: center;
 }
-tr:nth-child(even) {background-color: #e8f4f8;}
+tr:nth-child(even) {background-color: #FFCCCB;}
 tr:nth-child(odd) {background-color: #d4ebf2;}
 hr {
   display: block;

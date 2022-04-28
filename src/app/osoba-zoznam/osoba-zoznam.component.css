@@ -19,6 +19,7 @@ table{
   border-left-style: groove;
   border-bottom-style: groove;
   text-align: center;
+  overflow-x:auto;
 }
 hr {
   display: block;
