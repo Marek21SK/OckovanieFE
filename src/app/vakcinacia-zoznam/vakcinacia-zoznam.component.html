@@ -10,16 +10,16 @@
     <table class="table" *ngIf="vakcinacie.length > 0">
       <thead>
       <tr>
-        <th scope="col">ID vakcíny</th>
-        <th scope="col">ID osoby</th>
+        <th scope="col">Názvy vakcín</th>
+        <th scope="col">Mená zaočkovaných osôb</th>
         <th scope="col">Zmaž</th>
       </tr>
       </thead>
 
       <tbody>
       <tr *ngFor="let vakcinacia of vakcinacie">
-        <td>{{vakcinacia.vakcinaId}}</td>
-        <td>{{vakcinacia.osobaId}}</td>
+        <td>{{vakcinacia.nazovVakcin}}</td>
+        <td>{{vakcinacia.osobaMeno + " " + vakcinacia.osobaPriezvisko}}</td>
 
         <!--
         <button (click)="uprav(vakcinacia.id)">UPRAVIŤ</button>

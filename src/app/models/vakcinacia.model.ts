@@ -7,6 +7,9 @@ export class Vakcinacia{
   zaockovanostDo: Date;
   nazovVakciny: String;
   pocetDavok: number;
+  osobaMeno: string;
+  osobaPriezvisko: string;
+  nazovVakcin: string;
 
   constructor(vakcinacia: Vakcinacia) {
     this.id = vakcinacia.id;
@@ -17,6 +20,9 @@ export class Vakcinacia{
     this.zaockovanostDo = vakcinacia.zaockovanostDo;
     this.nazovVakciny = vakcinacia.nazovVakciny;
     this.pocetDavok = vakcinacia.pocetDavok;
+    this.osobaMeno = vakcinacia.osobaMeno;
+    this.osobaPriezvisko = vakcinacia.osobaPriezvisko;
+    this.nazovVakcin = vakcinacia.nazovVakcin;
   }
 }
 export class VakcinaciaZoznam{
@@ -28,6 +34,9 @@ export class VakcinaciaZoznam{
   zaockovanostDo: Date;
   nazovVakciny: String;
   pocetDavok: number;
+  osobaMeno: string;
+  osobaPriezvisko: string;
+  nazovVakcin: string;
 
   constructor(vakcinacia: VakcinaciaZoznam) {
     this.id = vakcinacia.id;
@@ -38,5 +47,8 @@ export class VakcinaciaZoznam{
     this.zaockovanostDo = vakcinacia.zaockovanostDo;
     this.nazovVakciny = vakcinacia.nazovVakciny;
     this.pocetDavok = vakcinacia.pocetDavok;
+    this.osobaMeno = vakcinacia.osobaMeno;
+    this.osobaPriezvisko = vakcinacia.osobaPriezvisko;
+    this.nazovVakcin = vakcinacia.nazovVakcin;
   }
 }
