@@ -7,7 +7,7 @@ import {Vakcinacia, VakcinaciaZoznam} from "./app/models/vakcinacia.model";
   providedIn: 'root'
 })
 export class VakcinaciaService {
-  private apiUrl = 'http://localhost:8080/api/vakcinacie';
+  private apiUrl = 'http://backend:8080/api/vakcinacie';
 
   constructor(private http: HttpClient) { }
 
